@@ -82,7 +82,6 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="search_model.html#entitymatchtype" class="tsd-kind-icon">Entity<wbr>Match<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="search_model.html#resulttype" class="tsd-kind-icon">Result<wbr>Type</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="search_model.html#resulttypekey" class="tsd-kind-icon">Result<wbr>Type<wbr>Key</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="search_model.html#searchresulttype" class="tsd-kind-icon">Search<wbr>Result<wbr>Type</a></li>
 							</ul>
 						</section>
@@ -97,15 +96,28 @@
 					<div class="tsd-signature tsd-kind-icon">Entity<wbr>Match<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/search/SearchResult.ts:20</li>
+							<li>Defined in src/search/SearchResult.ts:14</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the object that tell us, how the result matches to the query</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>that match with a query</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>of the matches to a query</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>text of the query</p>
+							</dd>
+						</dl>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
 							<li class="tsd-parameter">
 								<h5>language<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WikidataLanguage</span></h5>
 							</li>
@@ -124,9 +136,45 @@
 					<div class="tsd-signature tsd-kind-icon">Result<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/search/SearchResult.ts:27</li>
+							<li>Defined in src/search/SearchResult.ts:34</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the return result from APIs query.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd></dd>
+							<dt>param</dt>
+							<dd><p>the entities ID (should start with Q or P ???)</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is a concept url of the entities (usually will be on this form: <a href="http://www.wikidata.org/entity/">http://www.wikidata.org/entity/</a><id>)</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is a title of the id (usually will be the same as id ???)</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is a wikidata page id (???)</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is a wikidata url (should be inform of &#39;<a href="http://www.wikidata.org/wiki/">http://www.wikidata.org/wiki/</a><id>&#39;)</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is a label that will show as a title in website (should be human readable string text)</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is a description of this label (might not exist in some of language and entities)</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is the object show how this entities is match a query</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>is a alias key of the entity</p>
+							</dd>
+						</dl>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -167,22 +215,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="resulttypekey" class="tsd-anchor"></a>
-					<h3>Result<wbr>Type<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">Result<wbr>Type<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"repository"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"id"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"concepturi"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"title"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"pageid"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"url"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"label"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"description"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"match"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"aliases"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/search/SearchResult.ts:7</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="searchresulttype" class="tsd-anchor"></a>
 					<h3>Search<wbr>Result<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">Search<wbr>Result<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/search/SearchResult.ts:48</li>
+							<li>Defined in src/search/SearchResult.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -250,9 +288,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="search_model.html#resulttype" class="tsd-kind-icon">Result<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="search_model.html#resulttypekey" class="tsd-kind-icon">Result<wbr>Type<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="search_model.html#searchresulttype" class="tsd-kind-icon">Search<wbr>Result<wbr>Type</a>
