@@ -6,41 +6,65 @@ import { WikidataLanguage } from "wikidata-sdk";
 
 /**
  * the object that tell us, how the result matches to the query
- *
- * @param type that match with a query
- * @param language of the matches to a query
- * @param text text of the query
  */
 export type EntityMatchType = {
+  /**
+   * that match with a query
+   */
   type: string;
+  /**
+   * the language of the matches to a query
+   */
   language: WikidataLanguage;
+  /**
+   * text of the query
+   */
   text: string;
 };
 
 /**
  * the return result from APIs query.
- *
- * @param repository
- * @param id the entities ID (should start with Q or P ???)
- * @param concepturi is a concept url of the entities (usually will be on this form: http://www.wikidata.org/entity/<id>)
- * @param title is a title of the id (usually will be the same as id ???)
- * @param pageid is a wikidata page id (???)
- * @param url is a wikidata url (should be inform of 'http://www.wikidata.org/wiki/<id>')
- * @param label is a label that will show as a title in website (should be human readable string text)
- * @param description is a description of this label (might not exist in some of language and entities)
- * @param match is the object show how this entities is match a query
- * @param aliases is a alias key of the entity
  */
 export type ResultType = {
+  /**
+   * (???)
+   */
   repository: string;
+  /**
+   * the entities ID (should start with Q or P ???)
+   */
   id: string;
+  /**
+   * concepturi is a concept url of the entities (usually will be on this form: http://www.wikidata.org/entity/<id>)
+   */
   concepturi: string;
+  /**
+   * the title of the id (usually will be the same as id ???)
+   */
   title: string;
+  /**
+   * a wikidata page id (???)
+   */
   pageid: number;
+  /**
+   * a wikidata url (should be inform of 'http://www.wikidata.org/wiki/<id>')
+   */
   url: string;
+  /**
+   * label of entities that will show as a title in website (should be human readable string text)
+   */
   label: string;
+  /**
+   * description of this label (might not exist in some of language and entities)
+   */
   description?: string;
+  /**
+   * the object show how this entities is match a query
+   */
   match?: EntityMatchType;
+  /**
+   * a alias key of the entity
+   */
   aliases?: string[];
   [key: string]: any;
 };

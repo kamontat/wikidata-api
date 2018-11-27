@@ -1,17 +1,17 @@
 {
   "name": "wikidata-api",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "Wikidata APIs for node",
   "main": "dist/wikidata-api.js",
   "bin": "dist/wikidata-api.js",
-  "repository": "https:&#x2F;&#x2F;github.com&#x2F;kamontat&#x2F;wikidata-api",
+  "repository": "https://github.com/kamontat/wikidata-api",
   "author": "Kamontat Chantrachirathumrong <kamontat_c@hotmail.com>",
   "license": "MIT",
   "private": false,
   "generator": {
     "command": "create-typescript-template-app",
     "version": "1.0.0",
-    "repo": "https:&#x2F;&#x2F;github.com&#x2F;Template-generator&#x2F;create-typescript-template-app",
+    "repo": "https://github.com/Template-generator/create-typescript-app",
     "date": "1543330771530"
   },
   "keywords": [],

@@ -9,18 +9,28 @@ import { SearchResultType } from "./SearchResult";
 import { SearchCollection } from "./SearchCollection";
 
 /**
- * @param options searching options
- * @param options.search searching string
- * @param options.language the language of search query (default=en)
- * @param options.limit limit result (default=20)
- * @param options.uselang the language in which the search results are returned
- * @param options.config axios configuration object
+ * Searching options
  */
 export type SearchOption = {
+  /**
+   * searching string
+   */
   search: string;
+  /**
+   * the language of search query (default=en)
+   */
   language?: WikidataLanguage;
+  /**
+   * limit result (default=20)
+   */
   limit?: string | number;
+  /**
+   * the language in which the search results are returned
+   */
   uselang?: WikidataLanguage;
+  /**
+   * axios configuration object
+   */
   config?: AxiosRequestConfig;
 };
 
