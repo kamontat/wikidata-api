@@ -1,0 +1,63 @@
+{
+  "name": "wikidata-api",
+  "version": "0.0.1-alpha.0",
+  "description": "Wikidata APIs for node",
+  "main": "dist/wikidata-api.js",
+  "bin": "dist/wikidata-api.js",
+  "repository": "https:&#x2F;&#x2F;github.com&#x2F;kamontat&#x2F;wikidata-api",
+  "author": "Kamontat Chantrachirathumrong <kamontat_c@hotmail.com>",
+  "license": "MIT",
+  "private": false,
+  "generator": {
+    "command": "create-typescript-template-app",
+    "version": "1.0.0",
+    "repo": "https:&#x2F;&#x2F;github.com&#x2F;Template-generator&#x2F;create-typescript-template-app",
+    "date": "1543330771530"
+  },
+  "keywords": [],
+  "scripts": {
+    "compile": "webpack",
+    "compile:prod": "webpack --mode=production",
+    "compile:watch": "webpack --watch",
+    "start": "node dist/wikidata-api.js",
+    "clean": "rimraf bin dist *.log log docs",
+    "clean:all": "rimraf bin dist *.log log docs node_modules yarn.lock",
+    "build": "yarn compile:prod && pkg --out-path bin .",
+    "docs": "typedoc --out ./docs --target ES5 --module commonjs --name \"Wikidata APIs for Node\" --mode modules --exclude \"**/_*.ts\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "wd": "wd"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.9",
+    "@types/node": "10.12.10",
+    "@types/wikidata-sdk": "5.15.0",
+    "@types/yargs": "12.0.1",
+    "jest": "23.6.0",
+    "jest-extended": "0.11.0",
+    "jest-junit": "5.2.0",
+    "jest-raw-loader": "1.0.1",
+    "pkg": "4.3.4",
+    "rimraf": "2.6.2",
+    "to-string-loader": "1.1.5",
+    "ts-loader": "5.3.1",
+    "tslint": "5.11.0",
+    "tslint-loader": "3.5.4",
+    "typedoc": "0.13.0",
+    "typedoc-plugin-external-module-name": "1.1.3",
+    "typedoc-plugin-internal-external": "1.0.10",
+    "typedoc-plugin-single-line-tags": "1.0.0",
+    "typescript": "3.1.6",
+    "uglify-js": "3.4.9",
+    "webpack": "4.26.1",
+    "webpack-bundle-analyzer": "3.0.3",
+    "webpack-cli": "3.1.2",
+    "webpack-node-externals": "1.7.2"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "collections": "2.0.3",
+    "wikidata-cli": "7.0.2",
+    "wikidata-sdk": "5.15.9"
+  }
+}
