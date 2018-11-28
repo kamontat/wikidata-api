@@ -5,7 +5,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 
 import { WikidataLanguage, searchEntities } from "wikidata-sdk";
-import { SearchResultType } from "./SearchResult";
+import { RawSearchResultType } from "./SearchResult";
 import { SearchCollection } from "./SearchCollection";
 
 /**
@@ -49,7 +49,7 @@ export type SearchOption = {
  * @see https://www.wikidata.org/w/api.php?action=help&modules=wbsearchentities
  */
 export async function SearchEntities(options: SearchOption) {
-  const result = await axios.get<SearchResultType>(searchEntities(options), options.config);
+  const result = await axios.get<RawSearchResultType>(searchEntities(options), options.config);
   // console.log(result.data.search);
 
   const collection = new SearchCollection();
@@ -72,7 +72,9 @@ export async function SearchEntities(options: SearchOption) {
 export async function SearchEntity(options: SearchOption) {
   options.limit = 1; // override limit search
   const result = await SearchEntities(options);
-  return result.first();
+  const first = result.first();
+  if (!first) throw new Error(`Cannot search data with ${options}`);
+  return first;
 }
 
 /**
@@ -108,6 +110,6 @@ export class LowLevelSearchAPIs {
    * @see https://www.wikidata.org/w/api.php?action=help&modules=wbsearchentities
    */
   public static async GetEntities(options: SearchOption) {
-    return await axios.get<SearchResultType>(searchEntities(options), options.config);
+    return await axios.get<RawSearchResultType>(searchEntities(options), options.config);
   }
 }

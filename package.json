@@ -26,6 +26,7 @@
     "docs": "typedoc --out ./docs --target ES5 --module commonjs --name \"Wikidata APIs for Node\" --mode modules --exclude \"**/_*.ts\"",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "deploy": "node ./scripts/deploy.js",
     "wd": "wd"
   },
   "devDependencies": {

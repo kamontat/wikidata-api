@@ -4,7 +4,7 @@ export declare type EntityMatchType = {
     language: WikidataLanguage;
     text: string;
 };
-export declare type ResultType = {
+export declare type SearchResultType = {
     repository: string;
     id: string;
     concepturi: string;
@@ -17,11 +17,11 @@ export declare type ResultType = {
     aliases?: string[];
     [key: string]: any;
 };
-export declare type SearchResultType = {
+export declare type RawSearchResultType = {
     searchinfo: {
         search: string;
     };
-    search: ResultType[];
+    search: SearchResultType[];
 };
 export declare class SearchResult {
     private _id;
@@ -37,8 +37,8 @@ export declare class SearchResult {
     readonly match: EntityMatchType | undefined;
     readonly aliases: string[];
     private information;
-    constructor(queryResult: ResultType);
+    constructor(queryResult: SearchResultType);
     getMoreInformation(key: string): any;
     toString(): string;
-    toJSON(): ResultType;
+    toJSON(): SearchResultType;
 }

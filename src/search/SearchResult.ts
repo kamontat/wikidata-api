@@ -25,7 +25,7 @@ export type EntityMatchType = {
 /**
  * the return result from APIs query.
  */
-export type ResultType = {
+export type SearchResultType = {
   /**
    * (???)
    */
@@ -76,11 +76,11 @@ export type ResultType = {
  * @param searchinfo.search is a search query
  * @param search is a array of entities result
  */
-export type SearchResultType = {
+export type RawSearchResultType = {
   searchinfo: {
     search: string;
   };
-  search: ResultType[];
+  search: SearchResultType[];
 };
 
 export class SearchResult {
@@ -147,9 +147,9 @@ export class SearchResult {
     return this.information.aliases || [];
   }
 
-  private information: ResultType;
+  private information: SearchResultType;
 
-  constructor(queryResult: ResultType) {
+  constructor(queryResult: SearchResultType) {
     this._id = queryResult.id;
     this._title = queryResult.title;
 

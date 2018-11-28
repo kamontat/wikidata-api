@@ -4,7 +4,7 @@
 
 import Dict from "collections/dict";
 
-import { SearchResult, ResultType } from "./SearchResult";
+import { SearchResult, SearchResultType } from "./SearchResult";
 
 export class SearchCollection {
   private ts: Dict<SearchResult>;
@@ -20,7 +20,7 @@ export class SearchCollection {
    *
    * @param t result either raw result from URL APIs or object search result
    */
-  add(t: SearchResult | ResultType) {
+  add(t: SearchResult | SearchResultType) {
     if (t instanceof SearchResult) this.ts.set(t.id, t);
     else this.ts.set(t.id, new SearchResult(t));
   }

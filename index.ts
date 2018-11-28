@@ -1,16 +1,29 @@
 import { SearchEntity, LowLevelSearchAPIs } from "./src/search";
+import { getWikidataIdsFromWikipediaTitles } from "wikidata-sdk";
+import Axios from "axios";
+import { GetEntity } from "./src/get";
 
 SearchEntity({
   search: "Bern",
-  language: "th",
-  uselang: "it"
-}).then(result => {
-  if (result) console.log(result.toString());
-});
-
-const url = LowLevelSearchAPIs.GetLink({
-  search: "Hello",
   language: "th"
-});
+})
+  .then(result => {
+    return GetEntity({ id: result.id });
+  })
+  .then(result => {
+    // console.log(JSON.stringify(result.data, undefined, "  "));
+    console.log(result.data.entities["Q70"]);
+  });
 
-console.log(url);
+// const url = LowLevelSearchAPIs.GetLink({
+//   search: "Hello",
+//   language: "th"
+// });
+
+// Axios.get(
+//   getWikidataIdsFromWikipediaTitles({
+//     titles: "ber"
+//   })
+// ).then(result => {
+//   console.log(result.data);
+// });
