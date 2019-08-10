@@ -58,7 +58,7 @@
   "dependencies": {
     "axios": "0.18.0",
     "collections": "2.0.3",
-    "wikidata-cli": "7.0.2",
+    "wikidata-cli": "7.5.4",
     "wikidata-sdk": "5.15.9"
   }
 }

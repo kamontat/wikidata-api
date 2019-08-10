@@ -786,6 +786,15 @@ bluebird@^3.5.1:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
   integrity sha512-/qKPUQlaW1OyR51WeCPBvRnAlnZFUJkCSG5HzGnuIqhgyJtF+T94lFnn33eiazjRm2LAHVy2guNnaq48X9SJuw==
 
+bluereq@^2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/bluereq/-/bluereq-2.1.10.tgz#21e24f69da8af64d115a207a13c0436b533dc8d5"
+  integrity sha512-qjqBdqMfwVkOP8eyCnEUgOHJCK4UcLa+ltI3qLabdic7sTmkfG35wE5jsdxIyTevDcenqfLnsG2XdeJi09hHSA==
+  dependencies:
+    bluebird "^3.5.1"
+    lodash.pick "^4.4.0"
+    request "^2.85.0"
+
 bluereq@^2.1.7:
   version "2.1.7"
   resolved "https://registry.yarnpkg.com/bluereq/-/bluereq-2.1.7.tgz#1106bb8ce500d9a5bef9abbf484022830642d430"
@@ -1072,19 +1081,6 @@ chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-check-node-version@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/check-node-version/-/check-node-version-3.2.0.tgz#783a4292dbf76d6b8294b23abece33682b4a7cce"
-  integrity sha512-mJu4dADRf+NUeOyGgFTXaLtjyyffD3Eej2RA9IEk1CdHmoVurErLD++e/Ps6uKfsB273ky+0Z9NlOiuplxuNdw==
-  dependencies:
-    chalk "^2.3.0"
-    map-values "^1.0.1"
-    minimist "^1.2.0"
-    object-filter "^1.0.2"
-    object.assign "^4.0.4"
-    run-parallel "^1.1.4"
-    semver "^5.0.3"
-
 check-types@^7.3.0:
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-7.4.0.tgz#0378ec1b9616ec71f774931a3c6516fad8c152f4"
@@ -1329,14 +1325,6 @@ copy-paste@^1.3.0:
     iconv-lite "^0.4.8"
   optionalDependencies:
     sync-exec "~0.6.x"
-
-copy2cb@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/copy2cb/-/copy2cb-1.0.4.tgz#6ac12e0008399046933155ba76405fc744c99caa"
-  integrity sha512-mHkFm3Dk6c8yTSfp3IdqUyNHhZ8uyZwvcEGy/27LPD4sNsOm5fNUF/s9qzfCeqt6cztBDh+hAhIXOk7WzwzT3A==
-  dependencies:
-    chalk "^2.4.1"
-    copy-paste "^1.3.0"
 
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.7"
@@ -3611,6 +3599,11 @@ lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
 
+lodash@^4.17.11:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
 loose-envify@^1.0.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -3651,11 +3644,6 @@ map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
   integrity sha1-wyq9C9ZSXZsFFkW7TyasXcmKDb8=
-
-map-values@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/map-values/-/map-values-1.0.1.tgz#768b8e79c009bf2b64fee806e22a7b1c4190c990"
-  integrity sha1-douOecAJvytk/ugG4ip7HEGQyZA=
 
 map-visit@^1.0.0:
   version "1.0.0"
@@ -4130,12 +4118,7 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
-object-filter@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/object-filter/-/object-filter-1.0.2.tgz#af0b797ffebeaf8a52c6637cedbe8816cfec1bc8"
-  integrity sha1-rwt5f/6+r4pSxmN87b6IFs/sG8g=
-
-object-keys@^1.0.11, object-keys@^1.0.12:
+object-keys@^1.0.12:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.12.tgz#09c53855377575310cca62f55bb334abff7b3ed2"
   integrity sha512-FTMyFUm2wBcGHnH2eXmz7tC6IwlqQZ6mVZ+6dm6vZ4IQIHjs6FdNsQBuKGPuUUUY6NfJw2PshC08Tn6LzLDOag==
@@ -4146,16 +4129,6 @@ object-visit@^1.0.0:
   integrity sha1-95xEk68MU3e1n+OdOV5BBC3QRbs=
   dependencies:
     isobject "^3.0.0"
-
-object.assign@^4.0.4:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.0.tgz#968bf1100d7956bb3ca086f006f846b3bc4008da"
-  integrity sha512-exHJeq6kBKj58mqGyTQ9DFvrZC/eR6OwxzoM9YRoGBqrXYonaFyGiFMuc9VZrXf7DarreEwMpurG3dd+CNyW5w==
-  dependencies:
-    define-properties "^1.1.2"
-    function-bind "^1.1.1"
-    has-symbols "^1.0.0"
-    object-keys "^1.0.11"
 
 object.getownpropertydescriptors@^2.0.3:
   version "2.0.3"
@@ -5087,11 +5060,6 @@ rsvp@^3.3.3:
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-3.6.2.tgz#2e96491599a96cde1b515d5674a8f7a91452926a"
   integrity sha512-OfWGQTb9vnwRjwtA2QwpG2ICclHC3pgXZO5xt8H2EfgDquO0qVdSb5T88L4qJVAEugbS56pAuV4XZM58UX8ulw==
 
-run-parallel@^1.1.4:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.1.9.tgz#c9dd3a7cf9f4b2c4b6244e173a6ed866e61dd679"
-  integrity sha512-DEqnSRTDw/Tc3FXf49zedI638Z9onwUotBMiUFKmrO2sdFKIbXamXGQ3Axd4qgphxKB4kw/qP1w5kTxnfU1B9Q==
-
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/run-queue/-/run-queue-1.0.3.tgz#e848396f057d223f24386924618e25694161ec47"
@@ -5154,7 +5122,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.0.3, semver@^5.3.0, semver@^5.5.0:
+"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.3.0, semver@^5.5.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
   integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
@@ -6266,41 +6234,51 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
-wikidata-cli@7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/wikidata-cli/-/wikidata-cli-7.0.2.tgz#8c0711a86e443a8be2614d63ec612a07ed3a0774"
-  integrity sha512-FgGjNYoLYdiQ6RtwT3S5TWEq+FelijZUGD6FntMkoQ4W/kxX1dxuih5HYh5H3eb3YWCbeQ7b8PO5FErXLEmklg==
+wikidata-cli@7.5.4:
+  version "7.5.4"
+  resolved "https://registry.yarnpkg.com/wikidata-cli/-/wikidata-cli-7.5.4.tgz#5a2d4bc727e6e4508c1651eb75ce8647acb34313"
+  integrity sha512-FcWGJxw7o4y9KXwEf/oa8ActbcEK2reRaSDeFpHdeA+JDI+T/jAQ+X6x4hO6386QRf6SYPUKtEBGrxgDX62v2Q==
   dependencies:
-    bluereq "^2.1.7"
+    bluereq "^2.1.10"
     chalk "^2.4.1"
-    check-node-version "^3.2.0"
     commander "git+https://github.com/maxlath/commander.js.git#master"
-    copy2cb "^1.0.4"
+    copy-paste "^1.3.0"
     execa "^0.10.0"
-    lodash "^4.17.10"
+    lodash "^4.17.11"
     mkdirp "^0.5.1"
     opn "^5.3.0"
     prompt "^1.0.0"
     shell-quote "^1.6.1"
     split "^1.0.1"
     through "^2.3.8"
-    wikidata-edit "^2.4.0"
-    wikidata-sdk "^5.15.4"
+    wikidata-edit "^2.9.3"
+    wikidata-lang "^2.0.8"
+    wikidata-sdk "^6.6.0"
 
-wikidata-edit@^2.4.0:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/wikidata-edit/-/wikidata-edit-2.7.1.tgz#dcb584b00df86f1bd4e0300387dceed1962d7625"
-  integrity sha512-IuXK1uzOusFDaFkxAPyuk+GUi3QSXDU3Jp+0P0bNTjr1ZOu/iUv7aKjB/cOmLUHDLImDbd9kGuXRplGzTmTxDw==
+wikidata-edit@^2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/wikidata-edit/-/wikidata-edit-2.9.3.tgz#3939c42ee1a9aaf0a97a81f935f1db3900a388d3"
+  integrity sha512-Y3tOlEEGXtlGg3slPM9S5E3OayK1O+Sed1LvW6jSRHw8V1Wx0FOYWJn2uBM6XAZAzymj9pOjxD3FkLcWwZTHdw==
   dependencies:
     bluereq "^2.1.7"
     chalk "^2.4.1"
-    wikidata-sdk "^5.15.3"
+    wikidata-sdk "^6.3.0"
     wikidata-token "^2.3.5"
 
-wikidata-sdk@5.15.9, wikidata-sdk@^5.15.3, wikidata-sdk@^5.15.4:
+wikidata-lang@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/wikidata-lang/-/wikidata-lang-2.0.8.tgz#e9829bcf7977d2ca5dc1878a073e6959fee64542"
+  integrity sha512-KE8r1CwLedLihfHFVSYeR/ahHeeX/UTn+K3zDOMeGdVTkfdjNQajFiop+viIdPi2Ayd4bs4JQXjRBsBWw6IsYw==
+
+wikidata-sdk@5.15.9:
   version "5.15.9"
   resolved "https://registry.yarnpkg.com/wikidata-sdk/-/wikidata-sdk-5.15.9.tgz#4f251ee8f31158e2b46f3511405ab50299be7951"
   integrity sha512-I40/v7vW3gw1aLZ9/Yao4+I5ETPoOgE+3dt4rQxJkS510ow4nPb6DTtvA95zppmtDMDSNCNA1a7HN6FNRtAFQg==
+
+wikidata-sdk@^6.3.0, wikidata-sdk@^6.6.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/wikidata-sdk/-/wikidata-sdk-6.7.0.tgz#2436daadb9b5f5c0b882d115e56f6fbccb8ee795"
+  integrity sha512-X4Fuv7kd1Gfy+x0O8uM3J+Q0hnxS9RRrkLy76/btN049abroSrD1Mi/WC3vvYrUchqQWwKgF9EdYhNUOBU/Mpw==
 
 wikidata-token@^2.3.5:
   version "2.3.6"
