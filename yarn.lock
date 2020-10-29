@@ -105,10 +105,10 @@
   resolved "https://registry.yarnpkg.com/@types/wikidata-sdk/-/wikidata-sdk-5.15.0.tgz#5f203b67b67cf08018a22981b709ada29e950cff"
   integrity sha512-+50xv2Ibyonzh/62j08lV4SidNysBZCGo7sJxV6a7wuc5bAEKs393P1EBnUv9aQP0UEVDuVySBWClzDU+QGW8Q==
 
-"@types/yargs@12.0.1":
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.1.tgz#c5ce4ad64499010ae4dc2acd9b14d49749a44233"
-  integrity sha512-UVjo2oH79aRNcsDlFlnQ/iJ67Jd7j6uSg7jUJP/RZ/nUjAh5ElmnwlD5K/6eGgETJUgCHkiWn91B8JjXQ6ubAw==
+"@types/yargs@12.0.19":
+  version "12.0.19"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.19.tgz#04ec85aa12bb0b0f05a77699396d39417f0b837f"
+  integrity sha512-1wT5nWbZ0p2dJtKi9S0CjCKzQoVWby4VjtqOeqhTK8XK3nUHWqKWWuji29PzBC7cCDJatyA1VRzQnbEPLiXRSw==
 
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
