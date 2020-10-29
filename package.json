@@ -33,7 +33,7 @@
     "@types/jest": "23.3.9",
     "@types/node": "10.12.10",
     "@types/wikidata-sdk": "5.15.0",
-    "@types/yargs": "12.0.1",
+    "@types/yargs": "12.0.19",
     "jest": "23.6.0",
     "jest-extended": "0.11.0",
     "jest-junit": "5.2.0",
